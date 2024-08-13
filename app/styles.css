@@ -26,6 +26,10 @@
   --slate-dark-10: #777b84;
   --slate-dark-11: #b0b4ba;
   --slate-dark-12: #edeef0;
+
+  /* Semantic colors */
+  --grass-9: #46A758;
+  --tomato-9: #E54D2E;
 }
 
 /* Theme Tokens */
@@ -36,6 +40,10 @@
     /* App Colors */
     --bg-app: light-dark(white, var(--slate-dark-1));
     --text-app: light-dark(var(--slate-12), var(--slate-dark-12));
+
+    /* Semantic Colors */
+    --text-success: var(--grass-9);
+    --text-error: var(--tomato-9);
   }
 
   [data-color-scheme=light], [data-theme=light], .light {
@@ -54,4 +62,6 @@
 
   --background-color-app: var(--bg-app);
   --color-app: var(--text-app);
+  --color-success: var(--text-success);
+  --color-error: var(--text-error);
 }

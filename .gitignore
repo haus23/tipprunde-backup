@@ -3,6 +3,8 @@ node_modules/
 
 # Build
 dist/
+**/icon/sprite.svg
+**/icon/types.ts
 
 # Sensible data
 .env
