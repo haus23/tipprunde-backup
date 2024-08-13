@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/haus23/tipprunde/compare/v0.0.1...v0.0.2)
+
+### 🚀 Enhancements
+
+- Add icons component. ([77016af](https://github.com/haus23/tipprunde/commit/77016af))
+- Add link component. Wraps React Aria Component. ([76cdeaf](https://github.com/haus23/tipprunde/commit/76cdeaf))
+- Add React Aria RouterProvider to support client side routing ([ee6d731](https://github.com/haus23/tipprunde/commit/ee6d731))
+- Add general error boundary. ([b7c695c](https://github.com/haus23/tipprunde/commit/b7c695c))
+
+### ❤️ Contributors
+
+- Micha Buchholz <micha@haus23.net>
+
 ## v0.0.1
 
 
