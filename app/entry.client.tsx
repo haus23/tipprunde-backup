@@ -1,16 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
-import App from './App.tsx';
 import './styles.css';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-]);
+import router from './routes';
 
 const rootContainer = document.getElementById('root');
 
