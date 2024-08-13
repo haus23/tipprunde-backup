@@ -41,6 +41,10 @@
     --bg-app: light-dark(white, var(--slate-dark-1));
     --text-app: light-dark(var(--slate-12), var(--slate-dark-12));
 
+    /* Border, Ring, Divider Colors */
+    --ring-default: light-dark(var(--slate-7), var(--slate-dark-7));
+    --ring-offset-default: var(--bg-app);
+
     /* Semantic Colors */
     --text-success: var(--grass-9);
     --text-error: var(--tomato-9);
@@ -64,4 +68,6 @@
   --color-app: var(--text-app);
   --color-success: var(--text-success);
   --color-error: var(--text-error);
+  --ring-color-default: var(--ring-default);
+  --ring-offset-color-default: var(--ring-offset-default);
 }

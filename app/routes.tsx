@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from './components/error-boundary.tsx';
 
 import IconsRoute from '#routes/kitchen-sink+/$feature+/icons.tsx';
+import LinksRoute from '#routes/kitchen-sink+/$feature+/links.tsx';
 import AppRoot from './root.tsx';
 import RankingRoute from './routes/_foh+/($championship)+/index/_ranking.tsx';
 import FohLayout from './routes/_foh+/_layout/_layout.tsx';
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
           {
             path: 'icons',
             element: <IconsRoute />,
+          },
+          {
+            path: 'links',
+            element: <LinksRoute />,
           },
         ],
       },
