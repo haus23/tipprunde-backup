@@ -1,25 +1,78 @@
-import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
+import {
+  type ErrorResponse,
+  isRouteErrorResponse,
+  useLocation,
+  useParams,
+  useRouteError,
+} from 'react-router-dom';
+import { Icon } from './ui/icon/icon';
+import { Link } from './ui/link/link';
 
-export function ErrorBoundary() {
-  const error = useRouteError();
+type StatusHandler = (info: {
+  error: ErrorResponse;
+  params: Record<string, string | undefined>;
+}) => JSX.Element | null;
 
-  if (isRouteErrorResponse(error)) {
-    if (error.status === 404) {
-      return <div>This page doesn't exist!</div>;
-    }
-
-    if (error.status === 401) {
-      return <div>You aren't authorized to see this</div>;
-    }
-
-    if (error.status === 503) {
-      return <div>Looks like our API is down</div>;
-    }
-
-    if (error.status === 418) {
-      return <div>🫖</div>;
-    }
+function getErrorMessage(error: unknown) {
+  if (typeof error === 'string') return error;
+  if (
+    error &&
+    typeof error === 'object' &&
+    'message' in error &&
+    typeof error.message === 'string'
+  ) {
+    return error.message;
   }
+  return 'Unbekannter Fehler';
+}
 
-  return <div>Something went wrong</div>;
+/*
+ * TODO: Link in Line 69ff will do full page load. Will be fixed with remix.
+ */
+
+export function ErrorBoundary({
+  defaultStatusHandler = ({ error }) => (
+    <div>
+      <Icon name="frown" className="size-40 text-error" />
+      <p className="text-xl mt-4">
+        {error.status} {error.data}
+      </p>
+    </div>
+  ),
+  statusHandlers,
+  unexpectedErrorHandler = (error) => (
+    <div>
+      <Icon name="angry" className="size-40 text-error" />
+      <p className="text-xl mt-4">{getErrorMessage(error)}</p>
+    </div>
+  ),
+}: {
+  defaultStatusHandler?: StatusHandler;
+  statusHandlers?: Record<number, StatusHandler>;
+  unexpectedErrorHandler?: (error: unknown) => JSX.Element | null;
+}) {
+  const error = useRouteError();
+  const params = useParams();
+  const { pathname } = useLocation();
+
+  return (
+    <div className="h-svh flex flex-col gap-8 items-center justify-center text-center">
+      {isRouteErrorResponse(error)
+        ? (statusHandlers?.[error.status] ?? defaultStatusHandler)({
+            error,
+            params,
+          })
+        : unexpectedErrorHandler(error)}
+      {pathname === '/' ? (
+        <p className="block text-xl">Bitte Micha informieren!</p>
+      ) : (
+        <Link
+          href="/"
+          className="block px-4 py-1.5 text-xl underline underline-offset-4"
+        >
+          Zur Startseite
+        </Link>
+      )}
+    </div>
+  );
 }
