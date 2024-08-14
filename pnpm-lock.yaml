@@ -20,6 +20,9 @@ importers:
       react-router-dom:
         specifier: ~6.26.0
         version: 6.26.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tailwind-merge:
+        specifier: ~2.5.2
+        version: 2.5.2
       tailwind-variants:
         specifier: 0.2.1
         version: 0.2.1(tailwindcss@4.0.0-alpha.19)
