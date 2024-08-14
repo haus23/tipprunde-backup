@@ -2,7 +2,7 @@ import { Icon } from '#components/ui/icon/icon';
 
 export default function IconsRoute() {
   return (
-    <div className="flex flex-col gap-y-8 items-center">
+    <div className="flex flex-col items-center gap-y-8">
       <div className="flex flex-col gap-y-2">
         <h3>Default Icon</h3>
         <Icon name="folder-sync" />

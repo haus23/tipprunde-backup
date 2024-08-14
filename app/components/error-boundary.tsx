@@ -34,7 +34,7 @@ export function ErrorBoundary({
   defaultStatusHandler = ({ error }) => (
     <div>
       <Icon name="frown" className="size-40 text-error" />
-      <p className="text-xl mt-4">
+      <p className="mt-4 text-xl">
         {error.status} {error.data}
       </p>
     </div>
@@ -43,7 +43,7 @@ export function ErrorBoundary({
   unexpectedErrorHandler = (error) => (
     <div>
       <Icon name="angry" className="size-40 text-error" />
-      <p className="text-xl mt-4">{getErrorMessage(error)}</p>
+      <p className="mt-4 text-xl">{getErrorMessage(error)}</p>
     </div>
   ),
 }: {
@@ -56,7 +56,7 @@ export function ErrorBoundary({
   const { pathname } = useLocation();
 
   return (
-    <div className="h-svh flex flex-col gap-8 items-center justify-center text-center">
+    <div className="flex h-svh flex-col items-center justify-center gap-8 text-center">
       {isRouteErrorResponse(error)
         ? (statusHandlers?.[error.status] ?? defaultStatusHandler)({
             error,

@@ -9,9 +9,11 @@ import { focusRingStyles } from '../common-styles';
 const buttonStyles = tv({
   extend: focusRingStyles,
   base: [
-    'z-0 group',
-    'relative inline-flex cursor-default items-center justify-center select-none appearance-none outline-none font-semibold transition',
-    'px-4 min-w-20 h-10 text-small gap-2 rounded-default',
+    'group z-0 transition',
+    'relative inline-flex items-center justify-center',
+    'h-10 min-w-20 gap-2 rounded-default px-4',
+    'font-semibold text-small',
+    'cursor-default select-none appearance-none ',
     'data-[pressed=true]:scale-95',
   ],
   variants: {
@@ -37,7 +39,7 @@ const buttonStyles = tv({
     {
       variant: 'solid',
       color: 'primary',
-      class: 'text-comp-colored bg-comp-primary hover:bg-comp-primary-hover',
+      class: 'bg-comp-primary text-comp-colored hover:bg-comp-primary-hover',
     },
     {
       variant: 'ghost',
