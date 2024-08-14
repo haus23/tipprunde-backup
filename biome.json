@@ -18,6 +18,15 @@
             "attributes": ["className"],
             "functions": ["tv"]
           }
+        },
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "tailwind-variants": "Use custom tv from #utils/tv",
+              "tailwind-merge": "Using custom twMerge from #utils/tv"
+            }
+          }
         }
       }
     }

@@ -4,7 +4,8 @@ import {
   Button as RACButton,
   composeRenderProps,
 } from 'react-aria-components';
-import { type VariantProps, tv } from 'tailwind-variants';
+
+import { type VariantProps, tv } from '#utils/tv';
 import { focusRingStyles } from '../common-styles';
 
 const buttonStyles = tv({

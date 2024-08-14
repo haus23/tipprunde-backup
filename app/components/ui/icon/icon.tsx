@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react';
 
-import { tv } from 'tailwind-variants';
+import { tv } from '#utils/tv.ts';
 import iconsHref from './sprite.svg';
 import type { IconName } from './types.ts';
 

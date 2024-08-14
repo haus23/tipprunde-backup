@@ -3,7 +3,8 @@ import {
   Link as RACLink,
   composeRenderProps,
 } from 'react-aria-components';
-import { tv } from 'tailwind-variants';
+
+import { tv } from '#utils/tv';
 import { focusRingStyles } from '../common-styles';
 
 const linkStyles = tv({
