@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { ErrorBoundary } from './components/error-boundary.tsx';
 
+import ButtonsRoute from '#routes/kitchen-sink+/$feature+/buttons.tsx';
 import IconsRoute from '#routes/kitchen-sink+/$feature+/icons.tsx';
 import LinksRoute from '#routes/kitchen-sink+/$feature+/links.tsx';
 import AppRoot from './root.tsx';
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <HomeRoute />,
+          },
+          {
+            path: 'buttons',
+            element: <ButtonsRoute />,
           },
           {
             path: 'icons',

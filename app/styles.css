@@ -26,6 +26,30 @@
   --slate-dark-10: #777b84;
   --slate-dark-11: #b0b4ba;
   --slate-dark-12: #edeef0;
+  --iris-1: #fdfdff;
+  --iris-2: #f8f8ff;
+  --iris-3: #f0f1fe;
+  --iris-4: #e6e7ff;
+  --iris-5: #dadcff;
+  --iris-6: #cbcdff;
+  --iris-7: #b8baf8;
+  --iris-8: #9b9ef0;
+  --iris-9: #5b5bd6;
+  --iris-10: #5151cd;
+  --iris-11: #5753c6;
+  --iris-12: #272962;
+  --iris-dark-1: #13131e;
+  --iris-dark-2: #171625;
+  --iris-dark-3: #202248;
+  --iris-dark-4: #262a65;
+  --iris-dark-5: #303374;
+  --iris-dark-6: #3d3e82;
+  --iris-dark-7: #4a4a95;
+  --iris-dark-8: #5958b1;
+  --iris-dark-9: #5b5bd6;
+  --iris-dark-10: #6e6ade;
+  --iris-dark-11: #b1a9ff;
+  --iris-dark-12: #e0dffe;
 
   /* Semantic colors */
   --grass-9: #46A758;
@@ -41,7 +65,15 @@
     --bg-app: light-dark(white, var(--slate-dark-1));
     --text-app: light-dark(var(--slate-12), var(--slate-dark-12));
 
+    /* Component Colors */
+    --text-comp-colored: white;
+    --bg-comp: light-dark(var(--slate-3), var(--slate-dark-3));
+    --bg-comp-hover: light-dark(var(--slate-4), var(--slate-dark-4));
+    --bg-comp-primary: light-dark(var(--iris-9), var(--iris-dark-9));
+    --bg-comp-primary-hover: light-dark(var(--iris-10), var(--iris-dark-10));
+
     /* Border, Ring, Divider Colors */
+    --border-default: light-dark(var(--slate-6), var(--slate-dark-6));
     --ring-default: light-dark(var(--slate-7), var(--slate-dark-7));
     --ring-offset-default: var(--bg-app);
 
@@ -50,7 +82,8 @@
     --text-error: var(--tomato-9);
 
     /* Sizes, Margins, Gaps, ... */
-    --rounded-default: 6px;
+    --rounded-default: 8px;
+    --opacity-hover: 0.8;
   }
 
   [data-color-scheme=light], [data-theme=light], .light {
@@ -68,11 +101,17 @@
   --color-white: white;
 
   --background-color-app: var(--bg-app);
+  --background-color-comp: var(--bg-comp);
+  --background-color-comp-hover: var(--bg-comp-hover);
+  --background-color-comp-primary: var(--bg-comp-primary);
+  --background-color-comp-primary-hover: var(--bg-comp-primary-hover);
+  --border-color-default: var(--border-default);
   --color-app: var(--text-app);
+  --color-comp-colored: var(--text-comp-colored);
   --color-success: var(--text-success);
   --color-error: var(--text-error);
+  --opacity-hover: var(--opacity-hover);
   --radius-default: var(--rounded-default);
   --ring-color-default: var(--ring-default);
   --ring-offset-color-default: var(--ring-offset-default);
-
 }
