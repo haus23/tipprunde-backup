@@ -2,8 +2,11 @@ import type {
   Config,
   DefaultClassGroupIds,
   DefaultThemeGroupIds,
+  // biome-ignore lint/nursery/noRestrictedImports: Defining custom exports here
 } from 'tailwind-merge';
-import { type TV, tv as tvBase } from 'tailwind-variants';
+
+// biome-ignore lint/nursery/noRestrictedImports: Defining custom exports here
+import { type TV, type VariantProps, tv as tvBase } from 'tailwind-variants';
 
 type ClassGroupIds = Extract<
   DefaultClassGroupIds,
@@ -26,7 +29,7 @@ const mergeConfig: Partial<Config<ClassGroupIds, ThemeGroupIds>> = {
   },
 };
 
-export const tv = ((options, config?) =>
+const tv = ((options, config?) =>
   tvBase(options, {
     ...config,
     twMerge: config?.twMerge ?? true,
@@ -42,3 +45,5 @@ export const tv = ((options, config?) =>
       },
     },
   })) satisfies TV;
+
+export { tv, type VariantProps };
