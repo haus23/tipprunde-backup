@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import {
   type ButtonProps,
   Button as RACButton,
@@ -55,13 +56,19 @@ namespace Button {
       VariantProps<typeof buttonStyles> {}
 }
 
-export function Button({ className, variant, color, ...props }: Button.Props) {
-  return (
-    <RACButton
-      className={composeRenderProps(className, (className, renderProps) =>
-        buttonStyles({ ...renderProps, variant, color, className }),
-      )}
-      {...props}
-    />
-  );
-}
+const Button = forwardRef<HTMLButtonElement, Button.Props>(
+  ({ className, variant, color, ...props }, ref) => {
+    return (
+      <RACButton
+        className={composeRenderProps(className, (className, renderProps) =>
+          buttonStyles({ ...renderProps, variant, color, className }),
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
+Button.displayName = 'Button';
+
+export { Button };
