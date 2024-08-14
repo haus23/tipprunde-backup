@@ -5,7 +5,7 @@ export default function LinksRoute() {
   const { feature } = useParams() as { feature: string };
 
   return (
-    <div className="flex flex-col gap-y-8 items-center">
+    <div className="flex flex-col gap-y-8 items-center text-center">
       <div className="flex flex-col gap-y-2">
         <h3>Default Link</h3>
         <Link href={`/kitchen-sink/${feature}/icons`}>Icons</Link>

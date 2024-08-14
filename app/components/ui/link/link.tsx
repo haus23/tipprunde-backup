@@ -8,7 +8,7 @@ import { focusRingStyles } from '../common-styles';
 
 const linkStyles = tv({
   extend: focusRingStyles,
-  base: ['rounded-lg'],
+  base: ['rounded-default hover:opacity-80 transition-opacity'],
 });
 
 namespace Link {

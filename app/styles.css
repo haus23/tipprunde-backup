@@ -48,6 +48,9 @@
     /* Semantic Colors */
     --text-success: var(--grass-9);
     --text-error: var(--tomato-9);
+
+    /* Sizes, Margins, Gaps, ... */
+    --rounded-default: 6px;
   }
 
   [data-color-scheme=light], [data-theme=light], .light {
@@ -68,6 +71,8 @@
   --color-app: var(--text-app);
   --color-success: var(--text-success);
   --color-error: var(--text-error);
+  --radius-default: var(--rounded-default);
   --ring-color-default: var(--ring-default);
   --ring-offset-color-default: var(--ring-offset-default);
+
 }
