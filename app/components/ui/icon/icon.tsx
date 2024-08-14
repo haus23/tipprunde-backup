@@ -4,7 +4,7 @@ import { tv } from 'tailwind-variants';
 import iconsHref from './sprite.svg';
 import type { IconName } from './types.ts';
 
-const styles = tv({ base: 'inline size-5 self-center' });
+const iconStyles = tv({ base: 'inline size-5 self-center' });
 
 namespace Icon {
   export interface Props extends SVGProps<SVGSVGElement> {
@@ -26,7 +26,7 @@ function Icon({ name, className, children, ...props }: Icon.Props) {
       {...props}
       role="img"
       aria-label={`${name} icon`}
-      className={styles({ className })}
+      className={iconStyles({ className })}
     >
       <use href={`${iconsHref}#${name}`} />
     </svg>
