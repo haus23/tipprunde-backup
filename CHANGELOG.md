@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/haus23/tipprunde/compare/v0.0.2...v0.0.3)
+
+### 🚀 Enhancements
+
+- Add button component. ([a1c319d](https://github.com/haus23/tipprunde/commit/a1c319d))
+
+### 💅 Refactors
+
+- Adjust link styles. ([7ea71f1](https://github.com/haus23/tipprunde/commit/7ea71f1))
+
+### 🏡 Chore
+
+- **dx:** Use sorted classes by now. ([4956bbd](https://github.com/haus23/tipprunde/commit/4956bbd))
+
+### ❤️ Contributors
+
+- Micha Buchholz <micha@haus23.net>
+
 ## v0.0.2
 
 [compare changes](https://github.com/haus23/tipprunde/compare/v0.0.1...v0.0.2)
