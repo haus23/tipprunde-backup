@@ -63,6 +63,7 @@
 
     /* App Colors */
     --bg-app: light-dark(white, var(--slate-dark-1));
+    --bg-content-1: light-dark(var(--slate-2), var(--slate-dark-2));
     --text-app: light-dark(var(--slate-12), var(--slate-dark-12));
 
     /* Component Colors */
@@ -84,6 +85,12 @@
     /* Sizes, Margins, Gaps, ... */
     --rounded-default: 8px;
     --opacity-hover: 0.8;
+
+    /* Shadow */
+    --shadow-default:
+      0px 0px 15px 0px rgb(0 0 0 / .03),
+      0px 2px 30px 0px rgb(0 0 0 / .08),
+      0px 0px 1px 0px rgb(0 0 0 / .3);
   }
 
   [data-color-scheme=light], [data-theme=light], .light {
@@ -105,7 +112,9 @@
   --background-color-comp-hover: var(--bg-comp-hover);
   --background-color-comp-primary: var(--bg-comp-primary);
   --background-color-comp-primary-hover: var(--bg-comp-primary-hover);
+  --background-color-content-1: var(--bg-content-1);
   --border-color-default: var(--border-default);
+  --shadow-default: var(--shadow-default);
   --color-app: var(--text-app);
   --color-comp-colored: var(--text-comp-colored);
   --color-success: var(--text-success);

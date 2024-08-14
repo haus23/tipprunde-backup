@@ -5,6 +5,7 @@ import { ErrorBoundary } from './components/error-boundary.tsx';
 import ButtonsRoute from '#routes/kitchen-sink+/$feature+/buttons.tsx';
 import IconsRoute from '#routes/kitchen-sink+/$feature+/icons.tsx';
 import LinksRoute from '#routes/kitchen-sink+/$feature+/links.tsx';
+import PopoversRoute from '#routes/kitchen-sink+/$feature+/popovers.tsx';
 import AppRoot from './root.tsx';
 import RankingRoute from './routes/_foh+/($championship)+/index/_ranking.tsx';
 import FohLayout from './routes/_foh+/_layout/_layout.tsx';
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
           {
             path: 'links',
             element: <LinksRoute />,
+          },
+          {
+            path: 'popovers',
+            element: <PopoversRoute />,
           },
         ],
       },
