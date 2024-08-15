@@ -1,8 +1,10 @@
 import { forwardRef } from 'react';
 import {
+  ButtonContext,
   type ButtonProps,
   Button as RACButton,
   composeRenderProps,
+  useContextProps,
 } from 'react-aria-components';
 
 import { type VariantProps, tv } from '#utils/tv';
@@ -58,7 +60,14 @@ namespace Button {
 }
 
 const Button = forwardRef<HTMLButtonElement, Button.Props>(
-  ({ className, variant, color, ...props }, ref) => {
+  ({ variant, color, ...componentProps }, componentRef) => {
+    const [mergedProps, ref] = useContextProps(
+      componentProps,
+      componentRef,
+      ButtonContext,
+    );
+    const { className, ...props } = mergedProps;
+
     return (
       <RACButton
         className={composeRenderProps(className, (className, renderProps) =>
