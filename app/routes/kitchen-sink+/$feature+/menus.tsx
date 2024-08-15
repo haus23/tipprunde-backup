@@ -2,9 +2,11 @@ import { type Key, useState } from 'react';
 import { Button } from '#components/ui/button/button';
 import { Icon, type IconName } from '#components/ui/icon/icon';
 import { Menu, MenuItem, MenuItems } from '#components/ui/menu/menu';
+import { includes } from '#utils/misc';
+import { type Theme, useTheme } from '#utils/theme/theme.client';
 
 const colorSchemes: {
-  name: string;
+  name: Theme['colorScheme'];
   label: string;
   icon: IconName;
 }[] = [
@@ -19,14 +21,19 @@ export default function MenusRoute() {
     typeof key === 'string' && setFramework(key);
   }
 
-  const [colorScheme, setColorScheme] = useState(() => {
-    const documentColorScheme = document.documentElement.dataset.colorScheme;
-    return new Set([documentColorScheme || 'system']);
-  });
+  const { setTheme, theme } = useTheme();
 
-  function changeColorScheme(key: Key) {
-    document.documentElement.dataset.colorScheme = String(key);
-    setColorScheme(new Set([document.documentElement.dataset.colorScheme]));
+  const selectedColorScheme = new Set([theme.colorScheme]);
+
+  function onThemeSelect(key: Key) {
+    if (
+      includes(
+        colorSchemes.map((cs) => cs.name),
+        key,
+      )
+    ) {
+      !selectedColorScheme.has(key) && setTheme({ ...theme, colorScheme: key });
+    }
   }
 
   return (
@@ -55,8 +62,8 @@ export default function MenusRoute() {
           <MenuItems
             className="w-44"
             selectionMode="single"
-            selectedKeys={colorScheme}
-            onAction={changeColorScheme}
+            selectedKeys={selectedColorScheme}
+            onAction={onThemeSelect}
           >
             {colorSchemes.map((cs) => (
               <MenuItem key={cs.name} id={cs.name} className="pl-2">

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 
 import './styles.css';
+import { ThemeProvider } from '#utils/theme/theme.client';
 import router from './routes';
 
 const rootContainer = document.getElementById('root');
@@ -13,6 +14,8 @@ if (!rootContainer) {
 
 createRoot(rootContainer).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
