@@ -2,6 +2,8 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { ErrorBoundary } from './components/error-boundary.tsx';
 
+import MatchesRoute from '#routes/_foh+/($championship)+/spiele/_matches.tsx';
+import PlayersRoute from '#routes/_foh+/($championship)+/spieler/_players.tsx';
 import ButtonsRoute from '#routes/kitchen-sink+/$feature+/buttons.tsx';
 import IconsRoute from '#routes/kitchen-sink+/$feature+/icons.tsx';
 import LinksRoute from '#routes/kitchen-sink+/$feature+/links.tsx';
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
               {
                 index: true,
                 element: <RankingRoute />,
+              },
+              {
+                path: 'spieler',
+                element: <PlayersRoute />,
+              },
+              {
+                path: 'spiele',
+                element: <MatchesRoute />,
               },
             ],
           },

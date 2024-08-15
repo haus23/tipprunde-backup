@@ -1,15 +1,19 @@
 import { Logo } from '#components/logo';
 import { ThemeMenu } from '#components/theme-menu';
-import { Link } from '#components/ui/link/link';
+import { Link, NavLink } from '#components/ui/link/link';
 
 export function FrontendHeader() {
   return (
     <header className="sticky top-0 mx-auto grid h-14 max-w-6xl px-2 sm:px-4">
       <div className="hidden grid-cols-[auto_1fr_auto] items-center gap-x-4 sm:grid">
-        <Link href="/">
+        <Link href="/" className="pl-2 text-app">
           <Logo />
         </Link>
-        <nav />
+        <nav>
+          <NavLink href="/kitchen-sink/frontend">Kitchen Sink</NavLink>
+          <NavLink href="/kitchen-sink/frontend/buttons">Buttons</NavLink>
+          <NavLink href="/kitchen-sink/frontend/links">Links</NavLink>
+        </nav>
         <div className="flex items-center gap-x-2">
           <ThemeMenu />
         </div>
