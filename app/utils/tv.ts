@@ -1,7 +1,8 @@
-import type {
-  Config,
-  DefaultClassGroupIds,
-  DefaultThemeGroupIds,
+import {
+  type Config,
+  type DefaultClassGroupIds,
+  type DefaultThemeGroupIds,
+  extendTailwindMerge,
   // biome-ignore lint/nursery/noRestrictedImports: Defining custom exports here
 } from 'tailwind-merge';
 
@@ -29,6 +30,8 @@ const mergeConfig: Partial<Config<ClassGroupIds, ThemeGroupIds>> = {
   },
 };
 
+const twMerge = extendTailwindMerge(mergeConfig);
+
 const tv = ((options, config?) =>
   tvBase(options, {
     ...config,
@@ -46,4 +49,4 @@ const tv = ((options, config?) =>
     },
   })) satisfies TV;
 
-export { tv, type VariantProps };
+export { tv, type VariantProps, twMerge };
