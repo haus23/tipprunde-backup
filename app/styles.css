@@ -73,6 +73,10 @@
     --bg-comp-primary: light-dark(var(--iris-9), var(--iris-dark-9));
     --bg-comp-primary-hover: light-dark(var(--iris-10), var(--iris-dark-10));
 
+    --bg-popover: var(--bg-content-1);
+    --fill-popover: var(--bg-content-1);
+    --stroke-popover: light-dark(var(--slate-4), transparent);
+
     /* Border, Ring, Divider Colors */
     --border-default: light-dark(var(--slate-6), var(--slate-dark-6));
     --ring-default: light-dark(var(--slate-7), var(--slate-dark-7));
@@ -113,14 +117,17 @@
   --background-color-comp-primary: var(--bg-comp-primary);
   --background-color-comp-primary-hover: var(--bg-comp-primary-hover);
   --background-color-content-1: var(--bg-content-1);
+  --background-color-popover: var(--bg-popover);
   --border-color-default: var(--border-default);
-  --shadow-default: var(--shadow-default);
   --color-app: var(--text-app);
   --color-comp-colored: var(--text-comp-colored);
   --color-success: var(--text-success);
   --color-error: var(--text-error);
+  --fill-popover: var(--fill-popover);
   --opacity-hover: var(--opacity-hover);
   --radius-default: var(--rounded-default);
   --ring-color-default: var(--ring-default);
   --ring-offset-color-default: var(--ring-offset-default);
+  --shadow-default: var(--shadow-default);
+  --stroke-popover: var(--stroke-popover);
 }
