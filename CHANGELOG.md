@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/haus23/tipprunde/compare/v0.0.3...v0.0.4)
+
+### 🚀 Enhancements
+
+- Add basic popover component. ([7697d3c](https://github.com/haus23/tipprunde/commit/7697d3c))
+- Add popover arrow. ([9a51bf9](https://github.com/haus23/tipprunde/commit/9a51bf9))
+- Implement dropdown menu. ([61cfe72](https://github.com/haus23/tipprunde/commit/61cfe72))
+- Add client theme hook (and the needed context). ([5af7be2](https://github.com/haus23/tipprunde/commit/5af7be2))
+- Implement theme-menu. ([231d338](https://github.com/haus23/tipprunde/commit/231d338))
+
+### 🩹 Fixes
+
+- Forward button ref. ([48e8858](https://github.com/haus23/tipprunde/commit/48e8858))
+- Provide custom twMerge config. ([1b490c7](https://github.com/haus23/tipprunde/commit/1b490c7))
+- Create custom twMergeConfig for tv ([cb025c7](https://github.com/haus23/tipprunde/commit/cb025c7))
+- Loose the theme selector. ([9412c40](https://github.com/haus23/tipprunde/commit/9412c40))
+
+### 💅 Refactors
+
+- Consume context props in button. ([468a014](https://github.com/haus23/tipprunde/commit/468a014))
+
+### ❤️ Contributors
+
+- Micha Buchholz <micha@haus23.net>
+
 ## v0.0.3
 
 [compare changes](https://github.com/haus23/tipprunde/compare/v0.0.2...v0.0.3)
