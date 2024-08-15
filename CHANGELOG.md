@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/haus23/tipprunde/compare/v0.0.4...v0.0.5)
+
+### 🚀 Enhancements
+
+- Add first navlink iteration. ([afa7c87](https://github.com/haus23/tipprunde/commit/afa7c87))
+
+### ❤️ Contributors
+
+- Micha Buchholz <micha@haus23.net>
+
 ## v0.0.4
 
 [compare changes](https://github.com/haus23/tipprunde/compare/v0.0.3...v0.0.4)
