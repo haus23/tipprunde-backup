@@ -65,7 +65,9 @@
     --bg-app: light-dark(white, var(--slate-dark-1));
     --bg-content-1: light-dark(var(--slate-2), var(--slate-dark-2));
     --text-app: light-dark(var(--slate-12), var(--slate-dark-12));
+    --text-app-accent: light-dark(var(--iris-12), var(--iris-dark-12));
     --text-selected: light-dark(var(--iris-11), var(--iris-dark-11));
+    --text-active: light-dark(var(--iris-10), var(--iris-dark-10));
 
     /* Component Colors */
     --text-comp-colored: white;
@@ -121,6 +123,8 @@
   --background-color-popover: var(--bg-popover);
   --border-color-default: var(--border-default);
   --color-app: var(--text-app);
+  --color-app-accent: var(--text-app-accent);
+  --color-active: var(--text-active);
   --color-comp-colored: var(--text-comp-colored);
   --color-selected: var(--text-selected);
   --color-success: var(--text-success);
